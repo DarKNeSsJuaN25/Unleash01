@@ -49,3 +49,8 @@ Primera API
 
 ![image](https://github.com/DarKNeSsJuaN25/Unleash01/assets/68095284/e4141059-d3dd-4899-bebb-69b3016177e2)
 Segunda API
+
+Podemos comprobar en **Unleash** los requests solicitados.
+
+![image](https://github.com/DarKNeSsJuaN25/Unleash01/assets/68095284/e93839d1-8af5-44bb-8d3b-cb97746bb4ce)
+
