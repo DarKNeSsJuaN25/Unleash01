@@ -26,6 +26,9 @@ function isFeatureEnabled(featureName) {
 ````
 Ahora, dentro de nuestro endpoint debemos colocar la condicinal de activacion para que funcione la API GEOCODIGO.
 ````javascript
+app.get('/weather/:place', async (req, res) => {
+    try {
+        const place = req.params.place;
         if (isFeatureEnabled('task')){
             // LA NUEVA API
             console.log("Aqui");
@@ -36,11 +39,13 @@ Ahora, dentro de nuestro endpoint debemos colocar la condicinal de activacion pa
         {
         //LA API YA IMPLEMENTADA
         }
+      }
+  //RESTO DEL CODIGO
 ````
-De esta manera, cada vez que realizamos una busqueda, se tiene 50% de probabilidad de usar la antigua API y 50% de usar la nueva api. En las imagenes, se podra encontrar al inicio del JSON a que api pertenece el response.
+De esta manera, cada vez que realizamos una busqueda, se tiene 50% de probabilidad de usar la antigua API y 50% de usar la nueva api. En las imagenes, se podra encontrar al inicio del JSON a que api pertenece el response al buscar `http://localhost:8100/weather/lima` como parametro.
 
-![Captura desde 2023-11-15 21-03-16](https://github.com/DarKNeSsJuaN25/Unleash01/assets/68095284/d0743590-dc40-4a63-8468-f5e95da4cb0d)
-Segunda API
-
-![image](https://github.com/DarKNeSsJuaN25/Unleash01/assets/68095284/07568506-d789-4513-8421-bdb370762673)
+![image](https://github.com/DarKNeSsJuaN25/Unleash01/assets/68095284/94b55633-de69-4faf-950c-259a472ba641)
 Primera API
+
+![image](https://github.com/DarKNeSsJuaN25/Unleash01/assets/68095284/e4141059-d3dd-4899-bebb-69b3016177e2)
+Segunda API
